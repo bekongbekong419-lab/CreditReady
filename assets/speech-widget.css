@@ -1,0 +1,15 @@
+
+/* Compact expandable floating read-aloud control */
+.speech-widget { position:fixed; right:18px; bottom:18px; z-index:9999; display:flex; flex-direction:column; align-items:flex-end; gap:10px; font-family:inherit; }
+.speech-toggle { width:48px; height:48px; border:0; border-radius:50%; display:grid; place-items:center; cursor:pointer; color:#fff; background:#16845B; box-shadow:0 5px 18px rgba(20,43,74,.25); font-size:1.15rem; transition:transform .18s ease, background .18s ease; }
+.speech-toggle:hover { transform:translateY(-2px); background:#116b49; }
+.speech-toggle:focus-visible, .speech-controls button:focus-visible { outline:3px solid #D9A441; outline-offset:3px; }
+.speech-toggle.is-open { background:#142B4A; }
+.speech-panel { width:min(290px, calc(100vw - 36px)); padding:15px; border:1px solid #e0e7ef; border-radius:16px; background:#fff; color:#142B4A; box-shadow:0 12px 36px rgba(20,43,74,.2); }
+.speech-panel[hidden] { display:none; }
+.speech-panel strong { display:block; margin-bottom:10px; font-size:.98rem; }
+.speech-controls { display:flex; gap:7px; flex-wrap:wrap; }
+.speech-controls button { flex:1; min-width:62px; border:0; border-radius:9px; padding:9px 10px; background:#F7F9FC; color:#142B4A; cursor:pointer; font:inherit; font-size:.88rem; }
+.speech-controls button:first-child { background:#16845B; color:#fff; }
+.speech-status { margin:9px 0 0; color:#5b6878; font-size:.8rem; }
+@media(max-width:480px) { .speech-widget { right:12px; bottom:12px; } .speech-toggle { width:44px; height:44px; } }
